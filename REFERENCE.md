@@ -72,11 +72,23 @@ For low-power applications, or intermittent readings you can also stop ranging:
 tof.stop_ranging()
 ```
 
+#### Ranging mode
+
+The VL53L5CX has two ranging modes: Continuous and Autonomous.
+
+The ranging mode can be selected with:
+
+```python
+tof.set_ranging_mode(mode)
+```
+
+Where `mode` is one of `vl53l5cx.RANGING_MODE_CONTINUOUS` or `vl53l5cx.RANGING_MODE_AUTONOMOUS`.
+
 #### Power Mode
 
-The VL53L5CX has two power modes: Continuous and Autonomous.
+The VL53L5CX has two power modes: Wake-up and Sleep.
 
-The operating mode can be selected with:
+The power mode can be selected with:
 
 ```python
 tof.set_power_mode(mode)
